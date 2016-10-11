@@ -75,9 +75,14 @@
 		<dependency>
 			<groupId>it.greenvulcano.gvesb</groupId>
 			<artifactId>gvbase</artifactId>
+			<version>4.0.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>it.greenvulcano.gvesb</groupId>
+			<artifactId>gvbase</artifactId>
 			<version>${gvesb.version}</version>
 			<type>bundle</type>
-			<scope>provided</scope>
+			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -126,7 +131,7 @@
 					<instructions>
 						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
 						<Bundle-Version>${project.version}</Bundle-Version>
-						<Export-Package>it.greenvulcano.gvesb.virtual.mqtt;version=${project.version}</Export-Package>
+						<Export-Package>it.greenvulcano.gvesb.plugin.wallet;version=${project.version}</Export-Package>
 						<Import-Package>
 							it.greenvulcano.configuration,
 							it.greenvulcano.util.metadata,

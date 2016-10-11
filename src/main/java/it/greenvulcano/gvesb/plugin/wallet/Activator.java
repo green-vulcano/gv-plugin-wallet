@@ -19,21 +19,24 @@
  *******************************************************************************/
 package it.greenvulcano.gvesb.plugin.wallet;
 
+import it.greenvulcano.util.metadata.PropertiesHandler;
+import it.greenvulcano.util.metadata.PropertyHandler;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
-import it.greenvulcano.gvesb.virtual.OperationFactory;
 
 public class Activator implements BundleActivator {
 
+	PropertyHandler handlerInstance = new WalletPropertyHandler();
+
 	@Override
 	public void start(BundleContext context) throws Exception {
-
+		PropertiesHandler.registerHandler(handlerInstance);
 	}
 
 	@Override
 	public void stop(BundleContext context) throws Exception {
-
+		PropertiesHandler.unregisterHandler(handlerInstance);
 	}
 
 }
